@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50fdd04f-be9e-4598-816f-5271551d0e17" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1bb8bb9d-41b3-46ed-9f9b-9231c17828fd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1bb8bb9d-41b3-46ed-9f9b-9231c17828fd.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/posts_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/admin/posts/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/posts/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/development.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db/development.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -143,14 +136,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="erb" value="595" />
+          <entry key="erb" value="608" />
           <entry key="rb" value="730" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="444" />
-          <entry key="RHTML" value="595" />
+          <entry key="RHTML" value="608" />
           <entry key="Ruby" value="286" />
         </counts>
       </usages-collector>
@@ -206,8 +199,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/admin/posts/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="135" selection-start-line="27" selection-start-column="135" selection-end-line="27" selection-end-column="135" />
+            <state relative-caret-position="511">
+              <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -503,18 +496,18 @@
       <workItem from="1540193409783" duration="1171000" />
       <workItem from="1540194605037" duration="9830000" />
       <workItem from="1540277750916" duration="1185000" />
-      <workItem from="1540279046919" duration="4033000" />
+      <workItem from="1540279046919" duration="4241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16219000" />
+    <option name="totallyTimeSpent" value="16427000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19349681" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19349681" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -527,7 +520,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.24498886" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.24498886" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.32962137" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49946696" weight="0.32962137" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32962137" />
@@ -738,8 +731,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/posts/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="135" selection-start-line="27" selection-start-column="135" selection-end-line="27" selection-end-column="135" />
+        <state relative-caret-position="511">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
         </state>
       </provider>
     </entry>

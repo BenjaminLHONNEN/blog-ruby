@@ -1,6 +1,6 @@
 <h1>Admin : </h1>
 
-<%=link_to 'new', admin_new_path %>
+<%=link_to raw('<i class="fas fa-plus"></i>'), admin_new_path, class: 'btn-floating btn-large waves-effect waves-light red' %>
 
 <table class="highlight">
   <thead>
@@ -31,4 +31,3 @@
   <% end %>
   </tbody>
 </table>
-<a>new</a>
