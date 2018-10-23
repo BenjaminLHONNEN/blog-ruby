@@ -1,0 +1,15 @@
+<%= text_field_tag 'post[title]', @post.title, class: '' %>
+<%= text_area_tag 'post[content]', @post.content, class: 'materialize-textarea' %>
+
+<div class="input-field col s12">
+  <select name="post[category_id]">
+    <% Category.all.each do |category| %>
+      <option value="<%= category.id %>"><%= category.name %></option>
+    <% end %>
+  </select>
+  <label>Materialize Select</label>
+</div>
+
+<br>
+<%= submit_tag 'Save', class: 'btn waves-effect waves-light' %>
+
