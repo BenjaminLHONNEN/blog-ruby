@@ -1,7 +1,11 @@
 
 class PostsController < ApplicationController
     def index
-        @posts = Post.all
+        if params[:query]
+            @posts = Search.new(params[:query]).perform
+        else
+            @posts = Post.all
+        end
     end
     def detail
         @post = Post.find(params[:id])

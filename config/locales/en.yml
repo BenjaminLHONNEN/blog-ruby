@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+  category: "Category"
+#  activerecord:
+#    models:
+#      post:
+#        attributes:
+#          title:
+#            blank: "Le titre doit être saisie"

@@ -1,5 +1,16 @@
+<% if @post.errors.messages.any? %>
+  <ul class="red lighten-3 red-text " style="padding: 10px; border: solid 1px red; border-radius: 3px;">
+    <% @post.errors.messages.each do |key, errors| %>
+      <% errors.each do |error| %>
+        <li><%=error %></li>
+      <% end %>
+    <% end %>
+  </ul>
+<% end %>
+
+
 <a href="./..">back</a>
 
-<%= form_tag admin_posts_path, method: :post do %>
+<%= form_tag admin_posts_path, method: :post, multipart: true  do %>
   <%= render partial: 'form' %>
-<%end %>
+<% end %>

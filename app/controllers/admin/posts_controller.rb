@@ -9,10 +9,14 @@ class Admin::PostsController < Admin::AdminController
   end
 
   def create
-        post = Post.new(post_params)
-        post.save
+        @post = Post.new(post_params)
 
-        redirect_to admin_posts_path
+        if @post.save
+            redirect_to admin_posts_path
+        else
+          #raise @post.errors.messages.inspect
+          render template: '/admin/posts/new'
+        end
   end
 
   def edit
@@ -20,9 +24,12 @@ class Admin::PostsController < Admin::AdminController
   end
 
   def update
-        post = Post.find(params[:id])
-        post.update_attributes(post_params)
-        redirect_to admin_posts_path
+        @post = Post.find(params[:id])
+        if @post.update_attributes(post_params)
+            admin_post_path
+        else
+            render template: '/admin/posts/' + params[:id]
+        end
   end
 
   def destroy
@@ -37,6 +44,7 @@ class Admin::PostsController < Admin::AdminController
         params.require(:post).permit(
             :title,
             :content,
+            :picture,
             :category_id
         ).merge(user_id: current_user.id)
   end

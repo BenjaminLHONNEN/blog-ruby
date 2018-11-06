@@ -1,5 +1,13 @@
-<%= text_field_tag 'post[title]', @post.title, class: '' %>
-<%= text_area_tag 'post[content]', @post.content, class: 'materialize-textarea' %>
+<div class="input-field">
+  <%= text_field_tag 'post[title]', @post.title, class: '' %>
+  <label>Title</label>
+</div>
+
+
+<div class="input-field">
+  <%= text_area_tag 'post[content]', @post.content, class: 'materialize-textarea' %>
+  <label>Content</label>
+</div>
 
 <div class="input-field col s12">
   <select name="post[category_id]">
@@ -7,9 +15,20 @@
       <option value="<%= category.id %>"><%= category.name %></option>
     <% end %>
   </select>
-  <label>Materialize Select</label>
+  <label>Category</label>
 </div>
+v
+
+<ul class="collection">
+  <% Tag.all.each do |tag| %>
+    <li class="collection-item">
+      <%= check_box_tag 'post[tag_ids][]', tag.id, nil, checked: @post.tags.include?(tag), class: 'filled-in' %><span><%= tag.name %></span>
+    </li>
+  <% end %>
+</ul>
+
+<label>Image </label>
+<%=file_field_tag 'post[picture]' %>
 
 <br>
 <%= submit_tag 'Save', class: 'btn waves-effect waves-light' %>
-

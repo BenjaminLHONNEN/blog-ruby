@@ -1,0 +1,42 @@
+<h1>Dashboard</h1>
+
+<h1> <%=t('category') %> </h1>
+
+<div class="row">
+  <div class="col s12s m4 l4">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">
+          Nombre de Postes :
+          <span class="fontSizChangeOnParentParentHover">
+            <%= @data.nb_post %>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m4 l4">
+    <div class="card">
+      <div class="card-content ">
+        <span class="card-title">
+          Nombre de Catégories :
+          <span class="fontSizChangeOnParentParentHover">
+            <%= @data.nb_category %>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m4 l4">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">
+          Nombre d'Utilisateurs :
+          <span class="fontSizChangeOnParentParentHover">
+            <%= @data.nb_user %>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

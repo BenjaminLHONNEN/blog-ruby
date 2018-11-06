@@ -1,15 +1,16 @@
 <h1>Admin : </h1>
 
-<%=link_to raw('<i class="fas fa-plus"></i>'), admin_new_path, class: 'btn-floating btn-large waves-effect waves-light red' %>
 
 <table class="highlight">
   <thead>
   <tr>
+    <th>Image</th>
     <th>Id</th>
     <th>Title</th>
     <th>Content</th>
     <th>Category</th>
     <th>User</th>
+    <th>Tags</th>
     <th></th>
   </tr>
   </thead>
@@ -18,16 +19,34 @@
 
   <% @posts.each do |post| %>
     <tr>
-      <td><%=post.id %></td>
-      <td><%=post.title %></td>
-      <td><%=post.content %></td>
-      <td><%=post.category.name %></td>
-      <td><%=post.user.name %></td>
       <td>
-        <%=link_to raw('<i class="fas fa-cogs"></i>'), admin_post_path(post.id) %>
-        <%=link_to raw('<i class="fas fa-trash-alt"></i>'), admin_post_path(post.id), method: 'delete', 'data-confirm': 'are you sure ?' %>
+        <% if post.picture.attached? %>
+          <%= image_tag post.picture, width: '100px' %>
+        <% end %>
+      </td>
+      <td><%= post.id %></td>
+      <td><%= post.title %></td>
+      <td><%= post.content %></td>
+      <td><%= post.category.name %></td>
+      <td><%= post.user.name %></td>
+      <td>
+        <% post.tags.each do |tag| %>
+          <div class="chip">
+            <%= tag.name %>
+          </div>
+        <% end %>
+      </td>
+      <td>
+        <%= link_to raw('<i class="fas fa-cogs"></i>'), admin_post_path(post.id) %>
+        <%= link_to raw('<i class="fas fa-trash-alt"></i>'), admin_post_path(post.id), method: 'delete', 'data-confirm': 'are you sure ?' %>
       </td>
     </tr>
   <% end %>
   </tbody>
 </table>
+
+<div>
+  <p style="float: right;">
+    <%= link_to raw('<i class="fas fa-plus"></i>'), admin_new_path, class: 'btn-floating btn-large waves-effect waves-light red' %>
+  </p>
+</div>
