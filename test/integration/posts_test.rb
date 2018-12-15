@@ -5,7 +5,6 @@ feature 'Post Homepage' do
     sign_in users(:one)
   end
   describe "Form" do
-    focus
     it "#delete" do
       assert_difference 'Post.count' do
         delete admin_post_path(posts(:one).id)
@@ -13,7 +12,6 @@ feature 'Post Homepage' do
         assert_equal 302, last_response.status
       end
     end
-    focus
     it "#create" do
       assert_difference 'Post.count' do
 

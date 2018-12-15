@@ -14,9 +14,49 @@
       </div>
     </div>
   <% end %>
-  <%=form_tag root_path, method: :get do %>
-      <%= text_field_tag 'query', nil, class:"" %>
-      <%= submit_tag 'Rechercher', class:"" %>
+  <%= form_tag root_path, method: :get do %>
+    <%= text_field_tag 'query', nil, class: "" %>
+    <%= submit_tag 'Rechercher', class: "btn btn-wave" %>
   <% end %>
+  <div class="input-field col s12">
+    <select id="selectCurrency" name="currency" onchange="currencyChange()">
+      <option value="" disabled <%= session[:currency] ? "" : "selected" %>>Choose your option</option>
+      <option value="€" <%= session[:currency] == "€" ? "selected" : "" %>>€</option>
+      <option value="£" <%= session[:currency] == "£" ? "selected" : "" %>>£</option>
+      <option value="$" <%= session[:currency] == "$" ? "selected" : "" %>>$</option>
+    </select>
+    <label>Currency : </label>
+  </div>
+
+  <div class="row">
+  <textarea id="message" data-is="chat"  class="materialize-textarea" style="height: 100px">
+  </textarea>
+  </div>
+
+  <script>
+      $(document).on('turbolinks:load', function(){
+          $(document).on("keypress", "[data-is='chat']", function(event) {
+              if (event.keyCode === 13) { // return/enter = send
+                  App.chat.speak(event.target.value);
+                  event.target.value = '';
+                  return event.preventDefault();
+              }
+          });
+      })
+  </script>
+
+  <script>
+    function currencyChange(){
+        console.log("Called");
+        $.ajax({
+            type:"GET",
+            url: "./setcurrency",
+            data: {
+                currency:document.getElementById("selectCurrency").value
+            }
+        });
+    }
+  </script>
+
 </div>
 

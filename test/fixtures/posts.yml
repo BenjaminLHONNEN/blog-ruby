@@ -5,7 +5,17 @@
 # below each fixture, per the syntax in the comments below
 #
 one:
-  title: 'titre premier post'
-  content: 'content premier test'
+  title: 'titre 1 post'
+  content: 'content 1 test'
+  user: users(:one)
+  category: categories(:one)
+two:
+  title: 'titre 2 post'
+  content: 'content 2 test'
+  user: users(:one)
+  category: categories(:one)
+three:
+  title: 'titre 3 post'
+  content: 'content 3 test'
   user: users(:one)
   category: categories(:one)

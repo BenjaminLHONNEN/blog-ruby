@@ -6,13 +6,11 @@ class Search
   end
 
   def perform
-    out = @query != '' ? Post.joins(:user)
-                             .where(
-                               ['users.name LIKE ? OR posts.title Like ?',
-                                "%#{@query}%",
-                                "%#{@query}%"]
-                             ) : Post.all
-
-    out
+    @query != '' ? Post.joins(:user)
+                       .where(
+                           ['users.name LIKE ? OR posts.title Like ?',
+                            "%#{@query}%",
+                            "%#{@query}%"]
+                       ) : Post.all
   end
 end

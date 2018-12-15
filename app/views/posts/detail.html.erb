@@ -5,6 +5,8 @@
 <h2>
   <span><%= @post.id %></span> <%= @post.title %>
 </h2>
+<p> <%= l(@post.created_at, format: :default )%></p>
+<p> <%= l(@post.created_at, format: :short )%></p>
 <p>
   <%= @post.content %>
 </p>

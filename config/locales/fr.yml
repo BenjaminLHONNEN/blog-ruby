@@ -32,6 +32,10 @@
 fr:
   hello: "Hello world"
   category: "Catégorie"
+  time:
+    formats:
+      default: "%c"
+      short: "%d/%m/%Y"
 #  activerecord:
 #    models:
 #      post:
